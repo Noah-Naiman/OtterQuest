@@ -9,13 +9,11 @@ public class Character
 		private int mana;
 		private int armor;
 		private int level;
-		private int hunger;
-		private String inventory;
 		private int damage;
 		private String weapon;
 		public int speed;
 		
-		public Character(String n, int a, String c, int h, int m, int am, int l, int hg, String i, int d, String w, int s)
+		public Character(String n, int a, String c, int h, int m, int am, int l, int d, String w, int s)
 		{
 			name = n;
 			age = a;
@@ -24,8 +22,6 @@ public class Character
 			mana = m;
 			armor = am;
 			level = l;
-			hunger = hg;
-			inventory = i;
 			damage = d;
 			weapon = w;
 			speed = s;
@@ -34,97 +30,81 @@ public class Character
 		{
 			return name;
 		}
-		public void setName()
+		public void setName(String n)
 		{
-			this.name = name;
+			this.name = n;
 		}
 		public int getAge()
 		{
 			return age;
 		}
-		public void setAge()
+		public void setAge(int a)
 		{
-			this.age = age;
+			this.age = a;
 		}
 		public String classChoice()
 		{
 			return classChoice;
 		}
-		public void setClass()
+		public void setClass(String c)
 		{
-			this.classChoice = classChoice;
+			this.classChoice = c;
 		}
 		public int getHealth()
 		{
 			return health;
 		}
-		public void setHealth()
+		public void setHealth(int h)
 		{
-			this.health = health;
+			this.health = h;
 		}
 		public int getMana()
 		{
 			return mana;
 		}
-		public void setMana()
+		public void setMana(int m)
 		{
-			this.mana = mana;
+			this.mana = m;
 		}
 		public int getArmor()
 		{
 			return armor;
 		}
-		public void setArmor()
+		public void setArmor(int am)
 		{
-			this.armor = armor;
+			this.armor = am;
 		}
 		public int getLevel()
 		{
 			return level;
 		}
-		public void setLevel()
+		public void setLevel(int l)
 		{
-			this.level = level;
-		}
-		public int getHunger()
-		{
-			return hunger;
-		}
-		public void setHunger()
-		{
-			this.hunger = hunger;
-		}
-		public String getInventory()
-		{
-			return inventory;
-		}
-		public void setInventory()
-		{
-			this.inventory = inventory;
+			this.level = l;
 		}
 		public int getDamage()
 		{
 			return damage;
 		}
-		public void setDamage()
+		public void setDamage(int d)
 		{
-			this.damage = damage;
+			this.damage = d;
 		}
 		public String getWeapon()
 		{
 			return weapon;
 		}
-		public void setWeapon()
+		public void setWeapon(String w)
 		{
-			this.weapon = weapon;
+			this.weapon = w;
 		}
 		public int getSpeed()
 		{
 			return speed;
 		}
-		public void setSpeed()
+		public void setSpeed(int s)
 		{
-			this.speed = speed;
+			this.speed = s;
 		}
 
 	}
