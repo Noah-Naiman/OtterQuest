@@ -1,6 +1,6 @@
 package otter;
 
-public class Character
+public class Otter
 	{
 		private String name;
 		private int age;
@@ -13,7 +13,7 @@ public class Character
 		private String weapon;
 		public int speed;
 		
-		public Character(String n, int a, String c, int h, int m, int am, int l, int d, String w, int s)
+		public Otter(String n, int a, String c, int h, int m, int am, int l, int d, String w, int s)
 		{
 			name = n;
 			age = a;
