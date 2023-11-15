@@ -30,7 +30,7 @@ public class Player
 			System.out.println("What class would you like to be: Rogue, Paladin, Cleric, Bard, or Sorcerer");
 			String pClass = userStringInput.nextLine();
 			
-			System.out.println("Now comes the hard part, you have 60 stat points to spend, once you allocate to a stat you can't go back, so be careful.");
+			System.out.println("Now comes the hard part, you have " + statPoints + " stat points to spend, once you allocate to a stat you can't go back, so be careful.");
 			System.out.println("First up health, you can have a max of 30. Remaining stat points: " + statPoints);
 			int pHealth = userIntInput.nextInt();
 			statPoints = statPoints - pHealth;
