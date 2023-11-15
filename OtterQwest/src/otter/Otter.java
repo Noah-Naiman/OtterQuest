@@ -1,4 +1,4 @@
-,package otter;
+package otter;
 
 public class Otter
 	{
@@ -42,7 +42,7 @@ public class Otter
 		{
 			this.age = a;
 		}
-		public String classChoice()
+		public String getClassChoice()
 		{
 			return classChoice;
 		}
