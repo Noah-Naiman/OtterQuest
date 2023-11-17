@@ -23,67 +23,89 @@ public class Player
 			System.out.println("What is your name?");
 			String pName = userStringInput.nextLine();
 			System.out.println("Hello " + pName);
+			System.out.println();
 			
 			System.out.println("How old is your otter, 1-20");
 			int pAge = userIntInput.nextInt();
+			System.out.println();
 			
 			System.out.println("What class would you like to be: Rogue, Paladin, Cleric, Bard, or Sorcerer");
 			String pClass = userStringInput.nextLine();
+			System.out.println();
 			
 			System.out.println("Now comes the hard part, you have " + statPoints + " stat points to spend, once you allocate to a stat you can't go back, so be careful.");
 			System.out.println("First up health, you can have a max of 30. Remaining stat points: " + statPoints);
 			int pHealth = userIntInput.nextInt();
+			System.out.println();
 			statPoints = statPoints - pHealth;
 			
 			System.out.println("Next is mana, this will be used for spell casting so make sure you didn't waste too many points on health.");
 			System.out.println("Depending on your class you might want more or less mana, the limit is 25 and you have " + statPoints + " left.");
 			int pMana = userIntInput.nextInt();
+			System.out.println();
 			statPoints = statPoints - pMana;
 			
 			
 			System.out.println("Then we have armor, this is a flat stat and not class dependent, the limit is 10. You have " + statPoints + " remaining.");
 			int pArmor = userIntInput.nextInt();
+			System.out.println();
 			statPoints = statPoints - pArmor;
 			
 			System.out.println("Now is damage, this is a big one, the max is 20 and will be modified by your weapon choice.");
 			System.out.println("You have " + statPoints + " left to use.");
 			int pDamage = userIntInput.nextInt();
+			System.out.println();
 			statPoints = statPoints - pDamage;
 			
 			System.out.println("Next is your weapon. This will modify your damage stat depending on your weapon and class choice, ex. a rogue with a knife would get a +2");
 			System.out.println("You can choose from: 'Stone Broadsword', 'Rocky Lute', 'Seaweed Staff', 'Pointy Dagger', and 'Shrimp Wand'.");
 			String pWeapon = userStringInput.nextLine();
+			System.out.println();
 			
 			System.out.println("Now we have speed. This determines turn order so think about this one. The max is 25.");
 			System.out.println("You have " + statPoints + " remaining.");
 			int pSpeed = userIntInput.nextInt();
+			System.out.println();
 			statPoints = statPoints - pSpeed;
 			
 			System.out.println("Then you have magic damage, think about what class you chose and what weapon you have.");
 			System.out.println("There are " + statPoints + " left to spend, the max is 20");
 			int pMagic = userIntInput.nextInt();
+			System.out.println();
 			statPoints = statPoints - pMagic;
 			
 			System.out.println("Lastly there is resistance, this affects how much damage you take from magic attacks.");
 			System.out.println("You have " + statPoints + " remaining.");
 			int pResistance = userIntInput.nextInt();
+			System.out.println();
 			statPoints = statPoints - pResistance;
 			
 			if(statPoints > 0 && pResistance < 25)
 				{
 					System.out.println("You have " + statPoints + " left over, would you like to put them into resistance or leave them unspent?");
-					System.out.println("Spend them (1), Leave them (2)");
+					System.out.println("Spend them , Leave them (2)");
 					int answer  = userIntInput.nextInt();
+					System.out.println();
 					if(answer == 1)
 						{
-							pSpeed = pSpeed + statPoints;
+							pResistance = pResistance + statPoints;
+							System.out.println("Enough, it is time to start your adventure.");
+							for(int i = 0; i < 100; i++)
+							{
+								System.out.println();
+							}
 						}
+					else
+					{
+						System.out.println("Enough, it is time to start your adventure.");
+						for(int i = 0; i < 100; i++)
+						{
+							System.out.println();
+						}
+					}
 					
 				}
-			else
-				{
-					System.out.println("Enough, it is time to start your adventure.");
-				}
+
 			
 			
 			characters.add(new Otter(pName, pAge, pClass, pHealth, pMana, pArmor, 1, pDamage, pWeapon, pSpeed, pMagic, pResistance));			

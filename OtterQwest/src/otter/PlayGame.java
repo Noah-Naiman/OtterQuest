@@ -23,6 +23,7 @@ public class PlayGame
 			int characterCounter = 1;
 			System.out.println("Would you like to choose a (1) premade character  or (2) create your own ?");
 			int createChoice = userInput.nextInt();
+			System.out.println();
 			if(createChoice == 1)
 				{
 					System.out.println("You can choose from:");
@@ -32,7 +33,9 @@ public class PlayGame
 								characterCounter++;
 							}
 					System.out.println("Who would you like to be?");
+					System.out.println();
 					int premadeChoice = userInput.nextInt();
+					System.out.println();
 					
 					if(premadeChoice == 1)
 					{
@@ -68,6 +71,7 @@ public class PlayGame
 			System.out.println("Before you are two paths, one leads to a dark creepy forest and the other to a large foreboding castle.");
 			System.out.println("Which do you choose to take (1) Forest or (2) Castle");
 			int pathChoice = userInput.nextInt();
+			System.out.println();
 			
 			if(pathChoice == 1)
 			{
@@ -127,12 +131,14 @@ public class PlayGame
 				System.out.println("(2) Magic Attack");
 				System.out.println("(3) Run");
 				int combatChoice = userInput.nextInt();
+				System.out.println();
 				if(combatChoice == 1)
 				{
 					attackDamage = Player.characters.get(player).getDamage() - Predator.enemies.get(enemyDesignator).getEArmor();
 					enemyHealth = Predator.enemies.get(enemyDesignator).getEHealth() - attackDamage;
 					Predator.enemies.get(enemyDesignator).setEHealth(enemyHealth);
 					System.out.println("You hit the " + Predator.enemies.get(enemyDesignator).getEName() + " for " + attackDamage + " damage leaving them with " + enemyHealth + " health.");
+					System.out.println();
 					turnCounter++;
 					if(turnCounter %2 == 0)
 					{
@@ -141,6 +147,7 @@ public class PlayGame
 						if(enemyDamage <= 0)
 						{
 							System.out.println("Their attack did no damage.");
+							System.out.println();
 							combat();
 						}
 						else
