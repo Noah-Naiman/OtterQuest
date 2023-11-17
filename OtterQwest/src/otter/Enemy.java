@@ -10,8 +10,10 @@ public class Enemy
 		private int eDamage;
 		private String eWeapon;
 		private int eSpeed;
+		private int eMagic;
+		private int eResistance;
 		
-		public Enemy (String n, int h, int m, int a, int l, int d, String w, int s)
+		public Enemy (String n, int h, int m, int a, int l, int d, String w, int s, int md, int r)
 		{
 			eName = n;
 			eHealth = h;
@@ -21,6 +23,8 @@ public class Enemy
 			eDamage = d;
 			eWeapon = w;
 			eSpeed = s;
+			eMagic = md;
+			eResistance = r;
 		}
 		
 		public String getEName()
@@ -94,6 +98,25 @@ public class Enemy
 		{
 			this.eSpeed = s;
 		}
+		
+		public int getEMagic()
+		{
+			return eMagic;
+		}
+		public void setEMagic(int md)
+		{
+			this.eMagic = md;
+		}
+		
+		public int getEResistance()
+		{
+			return eResistance;
+		}
+		public void setEResistance(int r)
+		{
+			this.eResistance = r;
+		}
+		
 		
 		
 	}

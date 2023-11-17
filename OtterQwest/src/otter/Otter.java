@@ -11,9 +11,11 @@ public class Otter
 		private int level;
 		private int damage;
 		private String weapon;
-		public int speed;
+		private int speed;
+		private int magic;
+		private int resistance;
 		
-		public Otter(String n, int a, String c, int h, int m, int am, int l, int d, String w, int s)
+		public Otter(String n, int a, String c, int h, int m, int am, int l, int d, String w, int s, int md, int r)
 		{
 			name = n;
 			age = a;
@@ -25,6 +27,8 @@ public class Otter
 			damage = d;
 			weapon = w;
 			speed = s;
+			magic =md;
+			resistance = r;
 		}
 		public String getName()
 		{
@@ -105,6 +109,22 @@ public class Otter
 		public void setSpeed(int s)
 		{
 			this.speed = s;
+		}
+		public int getMagic()
+		{
+			return magic;
+		}
+		public void setMagic(int md)
+		{
+			this.magic = md;
+		}
+		public int getResistance()
+		{
+			return resistance;
+		}
+		public void setResistance(int r)
+		{
+			this.resistance = r;
 		}
 
 	}
